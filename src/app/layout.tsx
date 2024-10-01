@@ -14,7 +14,11 @@ const geistMono = localFont({
 	variable: "--font-geist-mono",
 	weight: "100 900",
 });
-
+const unbounded = localFont({
+	src: "./fonts/Unbounded.ttf",
+	variable: "--font-unbounded",
+	weight: "100 900",
+});
 export const metadata: Metadata = {
 	title: "Google Developers Students Club - ENSTA",
 	description: "Scientific and technical club of ENSTA Dergana",
@@ -28,7 +32,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+				className={`${geistSans.variable} ${geistMono.variable} ${unbounded.variable} antialiased`}>
 				<NavBar />
 				{children}
 			</body>

@@ -7,57 +7,57 @@ const navItems = [
 	{
 		name: "Home",
 		href: "/",
+		color: "hover:bg-gdsc-blue",
 	},
 	{
 		name: "Events",
 		href: "/",
+		color: "hover:bg-gdsc-green",
 	},
 	{
 		name: "Projects",
 		href: "/",
+		color: "hover:bg-gdsc-yellow",
 	},
 	{
 		name: "Team",
 		href: "/",
+		color: "hover:bg-gdsc-red",
 	},
 	{
 		name: "Contact",
 		href: "/",
+		color: "hover:bg-gdsc-blue",
 	},
 ];
 function NavBar() {
 	return (
-		<header className="w-full border-b sticky top-0 px-2 bg-zinc-50">
-			<nav className="container mx-auto p-2 flex justify-between items-center font-geistMono min-h-[8vh] ">
-				<div className="flex lg:gap-4 gap-2 items-center">
-					<img src="/gdsc_logo.svg" alt="" className="w-6 lg:w-12" />
-					<h1 className="hidden sm:block text-xs md:text-sm lg:text-lg">
-						<span className="font-bold text-red-500">G</span>oogle{" "}
-						<span className="font-bold text-blue-500">D</span>evelopers{" "}
-						<span className="font-bold text-green-500">S</span>tudents{" "}
-						<span className="font-bold text-yellow-500">C</span>lub |{" "}
-						<span className="">ENSTA</span>
-					</h1>
-					<h1 className="sm:hidden text-sm md:text-sm lg:text-lg">
-						<span className="font-bold text-red-500">G</span>
-						<span className="font-bold text-blue-500">D</span>
-						<span className="font-bold text-green-500">S</span>
-						<span className="font-bold text-yellow-500">C</span> ENSTA
-					</h1>
+		<header className="w-full border-b sticky top-0 px-2">
+			<nav className="container mx-auto p-2 flex justify-between items-center font-geistSans min-h-[8vh] ">
+				<div className="flex lg:gap-4 gap-2 items-center ">
+					<img src="/gdsc_logo.svg" alt="" className="w-6 lg:w-14" />
+					<div className="flex flex-col justify-center items-start">
+						<h1 className="hidden sm:block text-[0.5rem] lg:text-lg text-zinc-800 m-0 p-0">
+							Google Developers Students Club
+						</h1>
+						<h2 className="hidden sm:block text-xs lg:text-md text-zinc-600 m-0 p-0">
+							National Higher School Of Advanced Technlogies
+						</h2>
+					</div>
 				</div>
-				<div className="hidden xl:block">
+				<div className="hidden xl:block ">
 					<div className="flex gap-5 items-center">
 						{navItems.map((item) => (
 							<Link
 								href={item.href}
 								key={item.name}
-								className="hover:underline text-zinc-500 hover:text-zinc-950 transition-all duration-300">
+								className={`${item.color} hover:text-white px-2 py-1 rounded-lg text-zinc-500  transition-all duration-300`}>
 								{item.name}
 							</Link>
 						))}
 						<Link
 							href="/"
-							className="hover:bg-blue-700 transition-all duration-300 px-2 py-1 bg-blue-500 rounded-md text-white">
+							className=" transition-all duration-300 px-2 py-1 bg-gdsc-green rounded-lg text-white">
 							Join Us
 						</Link>
 					</div>

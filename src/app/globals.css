@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	--gdsc-blue: #4285f4;
+	--gdsc-red: #ea4335;
+	--gdsc-yellow: #fbbc05;
+	--gdsc-green: #34a853;
+}

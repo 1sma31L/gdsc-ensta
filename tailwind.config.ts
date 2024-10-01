@@ -11,10 +11,15 @@ const config: Config = {
 			colors: {
 				background: "var(--background)",
 				foreground: "var(--foreground)",
+				"gdsc-blue": "var(--gdsc-blue)",
+				"gdsc-green": "var(--gdsc-green)",
+				"gdsc-yellow": "var(--gdsc-yellow)",
+				"gdsc-red": "var(--gdsc-red)",
 			},
 			fontFamily: {
 				geistSans: ["var(--font-geist-sans)", "sans-serif"],
 				geistMono: ["var(--font-geist-mono)", "monospace"],
+				unbounded: ["var(--font-unbounded)", "cursive"],
 			},
 		},
 	},
