@@ -1,9 +1,14 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import NavBar from "@/components/NavBar";
+import NavBarCenter from "@/components/NavBar";
+import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
+const poppins = Poppins({
+	subsets: ["latin"], // or add 'latin-ext' if needed
+	weight: ["400", "700"], // Specify the font weights you want
+});
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
 	variable: "--font-geist-sans",
@@ -30,10 +35,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className="">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} ${unbounded.variable} antialiased`}>
-				<NavBar />
+				className={`${geistSans.variable} ${poppins.className} ${geistMono.variable} ${unbounded.variable} antialiased h-[2000px]`}>
+				<NavBarCenter />
 				{children}
 			</body>
 		</html>
