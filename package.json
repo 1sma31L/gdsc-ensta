@@ -8,6 +8,11 @@
 		"start": "next start",
 		"lint": "next lint"
 	},
+	"eslintConfig": {
+		"rules": {
+			"no-unused-vars": "off"
+		}
+	},
 	"dependencies": {
 		"@radix-ui/react-icons": "^1.3.0",
 		"class-variance-authority": "^0.7.0",
