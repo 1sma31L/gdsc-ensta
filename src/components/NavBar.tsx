@@ -5,6 +5,8 @@
 import React, { useRef, useState } from "react";
 
 import Link from "next/link";
+import SideMenu from "@/components/SideMenu";
+import ThemeToggler from "@/components/ThemeToggler";
 import { motion } from "framer-motion";
 import socialMediaAccounts from "@/data/social-media";
 
@@ -15,18 +17,13 @@ const colors = [
 ];
 const NavBarCenter = () => {
 	return (
-		<header className="sticky top-0 left-0 z-[1050] backdrop-blur-sm">
-			<nav className="py-8 flex justify-between items-center container mx-auto font-unbounded">
-				<div className="flex flex-col justify-center items-center gap-2">
-					<img
-						src="/gdsc.svg"
-						alt=""
-						className="w-20 hidden lg:block dark:invert"
-					/>
-					{/* <p className="text-xs">GDSC ENSTA</p> */}
+		<header className="sticky top-0 left-0 z-50 backdrop-blur-sm px-5 h-auto">
+			<nav className="py-4 flex justify-between items-center container mx-auto font-unbounded">
+				<div className="flex flex-col justify-center items-center">
+					<img src="/gdsc_logo.svg" alt="" className="w-10 lg:w-20" />
 				</div>
 				<SlideTabs />
-				<div className="hidden justify-between items-center gap-8 lg:flex 	">
+				<div className="hidden justify-between items-center gap-4 lg:flex">
 					{socialMediaAccounts.map((account, index) => (
 						<Link
 							target="_blank"
@@ -36,6 +33,10 @@ const NavBarCenter = () => {
 							{account.icon}
 						</Link>
 					))}
+					<ThemeToggler />
+				</div>
+				<div className="block lg:hidden">
+					<SideMenu />
 				</div>
 			</nav>
 		</header>
@@ -57,7 +58,7 @@ const SlideTabs = () => {
 					opacity: 0,
 				}));
 			}}
-			className="relative mx-auto flex w-fit rounded-full border-2 border-black dark:border-white bg-white p-1 dark:bg-black ">
+			className="hidden lg:flex relative mx-auto w-fit rounded-full border-2 border-black dark:border-white  p-1 bg-background ">
 			<Tab setPosition={setPosition}>Home</Tab>
 			<Tab setPosition={setPosition}>Events</Tab>
 			<Tab setPosition={setPosition}>Teams</Tab>

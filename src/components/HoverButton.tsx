@@ -10,9 +10,11 @@ export default function HoverButton() {
 			<Link href={"https://ensta.edu.dz/"} target="_blank">
 				<HoverBorderGradient
 					containerClassName="rounded-full"
-					className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2">
-					<img src="/ensta.png" alt="" className="w-4" />
-					<span>National Higher School of Advanced Technologies</span>
+					className="bg-background text-foreground flex items-center space-x-2">
+					<img src="/ensta.png" alt="" className="w-4 rounded-full" />
+					<span className="text-[8px] md:text-sm lg:text-md">
+						National Higher School of Advanced Technologies
+					</span>
 				</HoverBorderGradient>
 			</Link>
 		</div>

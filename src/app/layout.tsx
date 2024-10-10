@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import NavBarCenter from "@/components/NavBar";
 import { Poppins } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import localFont from "next/font/local";
 
 const poppins = Poppins({
@@ -37,8 +38,14 @@ export default function RootLayout({
 	return (
 		<html lang="en" className="">
 			<body
-				className={`${geistSans.variable} ${poppins.className} ${geistMono.variable} ${unbounded.variable} antialiased h-[2000px]`}>
-				<NavBarCenter />
+				className={`${geistSans.variable} ${poppins.className} ${geistMono.variable} ${unbounded.variable} antialiased`}>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange>
+					<NavBarCenter />
+				</ThemeProvider>
 				{children}
 			</body>
 		</html>
