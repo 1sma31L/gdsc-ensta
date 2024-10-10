@@ -22,8 +22,8 @@ const NavItems: TNavItem = [
 		icon: <MdEventAvailable />,
 	},
 	{
-		title: "Teams",
-		href: "/teams",
+		title: "Team",
+		href: "/team",
 		icon: <AiOutlineTeam />,
 	},
 	{
